@@ -2,7 +2,7 @@
 let C= 25;
 
 //Punto 1
-function convertirTemp(C) {
+function convertidorTemp(C) {
    
     F = (C * 9 / 5) + 32;
 
@@ -10,7 +10,7 @@ function convertirTemp(C) {
     
 }
 
-console.log(convertirTemp(C));
+console.log(convertidorTemp(C));
 
 //Punto 2
 let a = 1;
