@@ -40,10 +40,38 @@ function twoSum(numeros, suma) {
         }
     }
 }
+//punto 3:
+function conversionRomana(numr) {
+    let romanos = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    let resultado = 0
+    let anterior = 0
+    let actual = 0
+    for (let i = 0; i < numr.length; i++) {
+        actual = romanos[numr[i]];
+        
+        if (actual > anterior) {
+            resultado += actual - 2 * anterior;
+        } 
+        if(actual <= anterior){
+            resultado += actual;
+        }
+        anterior = actual;
+    }
+    return resultado;
+}
 
 console.log(desglosarString('murcielagos', 'vocales')); 
 console.log(desglosarString('murcielagos', 'consonantes'));
 console.log(twoSum([2, 7, 11, 15], 9)); 
 console.log(twoSum([3, 4,2], 6)); 
+console.log(conversionRomana('III'));
 
 
