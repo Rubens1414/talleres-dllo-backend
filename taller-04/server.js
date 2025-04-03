@@ -7,6 +7,7 @@ const port  = 3000;
 const data = require("./data/24-taller-04-datos.json"); // cargar datos del archivo data.json
 // resuelve CORS
 app.use(cors());
+app.use(express.json()); 
 
 app.get("/", (req, res) => {
 
@@ -81,10 +82,18 @@ app.get("/users/:id/suggest/:hobby", function (req, res) {
 
 //punto 6
 app.post("/users", function (req, res) {
-   // Crear un nuevo usuario
+   const { codigo, nombre, apellido, hobbies } = req.body;
+   
+   if (!codigo || !nombre || !apellido || !hobbies || !Array.isArray(hobbies) || hobbies.length < 2) {
+       return res.status(400).json({ message: "Usuario no valido" });
+   }
+   
+   data.push({ codigo, nombre, apellido, hobbies });
+
+   fs.writeFileSync("./data/24-taller-04-datos.json", JSON.stringify(data, null, 2));
+
+   res.status(201).json({ message: "User registrado", user: { codigo, nombre, apellido, hobbies } });
 });
-
-
 
 
 

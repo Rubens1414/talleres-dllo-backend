@@ -355,5 +355,25 @@
     "codigo": "200182115",
     "apellido": "CABANA PEREZ",
     "nombre": "KIDMAN"
+  },
+  {
+    "codigo": "200171902",
+    "nombre": "Edison",
+    "apellido": "Pacheco",
+    "hobbies": [
+      "estudiar",
+      "carnavalear",
+      "ir a cine"
+    ]
+  },
+  {
+    "codigo": "200171902",
+    "nombre": "Edison",
+    "apellido": "Pacheco",
+    "hobbies": [
+      "estudiar",
+      "carnavalear",
+      "ir a cine"
+    ]
   }
 ]
