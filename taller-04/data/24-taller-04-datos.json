@@ -375,5 +375,14 @@
       "carnavalear",
       "ir a cine"
     ]
+  },
+  {
+    "codigo": "200171902",
+    "nombre": "Tubens",
+    "apellido": "Romeo",
+    "hobbies": [
+      "estudiar",
+      "bellaquear"
+    ]
   }
 ]
